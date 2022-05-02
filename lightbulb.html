@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    <link rel="shortcut icon" href="https://www.bing.com/th?id=OIP.t8ZxHcwf3_lRfgRdPJmfsgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" type="image/x-icon">  
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+
+    img#bulb {
+    display: block;
+    margin-left: auto;
+    width: 312px;
+    margin-right: auto;
+}
+
+button#btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 107px;
+    height: 32px;
+    padding: 7px;
+    border-radius: 18px;
+    cursor: pointer;
+    background-color: #59e159;
+    color: white;
+    font-weight: bolder;
+}
+
+button#btn:hover{
+    background-color: #7bb17b;
+}
+
+#text{
+    color: white;
+    padding-left: 585px;
+    padding-top: 15px;
+
+    }
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+</style>
+<body>
+    <img src="bulb_off.jpg" alt="img bulb off" id="bulb">
+    <button id="btn">Turn ON</button>
+    
+        <h3 id="text">This project is made by <a href="https://www.linkedin.com/in/akki-indoria-a10728236/" target="_blank" ><i>Ayush Indoria</i> </a> </h3>
+   
+
+    <script>
+        let btn = document.getElementById('btn');
+        let bulb = document.getElementById('bulb');
+        btn.addEventListener('click',event);
+        function event(e) {
+            if(btn.textContent.includes('ON')) {
+                bulb.src = "bulb_on.png";
+                btn.textContent = "Turn OFF";
+            }
+            else{
+                bulb.src = "bulb_off.jpg";
+                btn.textContent = "Turn ON";
+            }
+        }
+        </script>
+</body>
+</html
